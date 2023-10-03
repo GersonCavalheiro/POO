@@ -78,8 +78,8 @@ C++:	Outra linguagem compilada, que também gera código objeto para
 	arquitetura alvo.
 	Passo 1: compile os módulos, obtendo os códigos objetos, da
 	seguinte forma:
-	$> g++ HelloWorld.cpp
-	$> g++ HelloWorldMain.cpp
+	$> g++ -c HelloWorld.cpp
+	$> g++ -c HelloWorldMain.cpp
 	Passo 2: execute a etapa de ligação dos dois módulos com o
 	seguinte comando:
 	$> g++ HelloWorld.o HelloWorldMain.o -o HelloWorld
