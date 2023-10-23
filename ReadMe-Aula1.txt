@@ -72,7 +72,7 @@ Java:	Java também é uma linguagem compilada. No entanto, diferente do
 	$> javac HelloWorldMain.java
 	Depois, invoque a máquina virtual Java para executar o programa
 	da seguinte forma:
-	$> java HelloWorld
+	$> java HelloWorldMain
 
 C++:	Outra linguagem compilada, que também gera código objeto para
 	arquitetura alvo.
