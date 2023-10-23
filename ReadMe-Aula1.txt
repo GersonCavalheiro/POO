@@ -46,7 +46,7 @@ Python: Python possui um interpretador. Como entrada do interpretador
 	é passado como parâmetro o módulo (arquivo) que contém o
 	"programa principal" a ser executado.
 	Execute desta forma:
-	$> python3 helloworld_main
+	$> python3 helloworld_main.py
 
 Rust:	Rust possui um gerenciador de pacotes, o Cargo. Este gerenciador
 	utiliza uma estrutura de diretórios para administrar as versões
