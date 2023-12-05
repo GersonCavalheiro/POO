@@ -1,0 +1,38 @@
+Pratique em C++, Java, Python e Rust: herança, especialização, polimorfismo, ligação dinâmica e sobreescrita de métodos.
+
+
+EXERCÍCIO 1: Conceitos Básicos de Herança
+
+Considere a seguinte classe em uma linguagem de programação fictícia:
+
+class Animal {
+  Atributos:
+    String nome;
+  Métodos:
+    Construtor(self,nome) {
+        self.nome = nome
+    }
+
+    void fazer_som(self) {
+        return "Som genérico do animal"
+    }
+}
+
+Crie duas subclasses, `Cachorro` e `Gato`, que herdam da classe `Animal`. Adicione métodos específicos para cada uma delas, como `latir` para o `Cachorro` e `miar` para o `Gato`. Além disso, faça com que o método `fazer_som` retorne o som específico de cada animal.
+
+ExERCÍCIO 2: Sobrescrita de Métodos
+
+Dada a hierarquia de classes anterior, pratique a sobrescrita de métodos. Na classe `Cachorro`, sobrescreva o método `fazer_som` para que ele retorne "Au Au" em vez do som genérico. Na classe `Gato`, faça o mesmo, mas com o som "Miau".
+
+EXERCÍCIO 3: Herança Múltipla
+
+Introduza uma classe adicional chamada `AnimalDomestico`. Modifique as classes `Cachorro` e `Gato` para herdar tanto de `Animal` quanto de `AnimalDomestico`. Adicione métodos na classe `AnimalDomestico` que representem ações comuns a animais domésticos, como `brincar` e `alimentar`.
+
+EXERCÍCIO 4: Construtores e Super
+
+Refatore as classes para incluir construtores apropriados. Utilize a função `super()` para chamar o construtor da classe pai. Certifique-se de que os construtores das classes filhas inicializem corretamente os atributos herdados da classe pai.
+
+EXERCÍCIO 5: Polimorfismo
+
+Crie uma lista de objetos que contenham instâncias de `Animal`, `Cachorro`, e `Gato`. Escreva uma função que itere sobre a lista e chame o método `fazer_som` para cada objeto. Observe como o polimorfismo permite que objetos de classes diferentes se comportem de maneira semelhante.
+
