@@ -1,0 +1,1 @@
+Neste diretório encontra-se o material utilizado na primeira metade do semestre 2023/2. Nesta etapa, os conceitos da Programação Orientada a Objetos foram desenvolvidos, observando estudos de caso em Python, Rust, Java e C++.
