@@ -1,5 +1,13 @@
 Tratamento de Exceções
 
+* Importante:
+*            Em aula, nosso estudo de caso sobre Tratamento de Exceção
+*            abordou a linguagem Java. Como de praxe, estou apresentando
+*            exemplos de usos nas quatro linguagens visitadas durante o
+*            semestre.
+*            Rust possui particularidades, algumas dessas particularidades
+*            encontram-se no final deste ReadMe.
+
 O tratamento de exceções é um recurso desejável no processo de desenvolvimento
 de software por aumentar a robustez dos programas desenvolvidos. O mecanismo
 envolve a utilização de blocos try, catch e finally:
@@ -83,3 +91,39 @@ de saque em um Cofrinho não foi possível por insuficiência de saldo. Neste
 caso, a exceção levantada é capturada e um procedimento de recuperação
 A recuperação, no caso, é a solicitação de um empréstimo e a realização
 de uma nova tentativa de saque.
+
+Particularidades de Rust:
+-------------------------
+
+O tratamento de exceções em Rust possui diferenças significativas em
+relação as outras linguagens visitadas no semestre. Uma comparação entre
+as soluções de Rust e Java são destacadas na sequência.
+
+Em Java:
+- Checked e Unchecked Exceptions: Java possui exceções verificadas
+  e exceções não verificadas. Exceções verificadas são aquelas que o
+  compilador exige que sejam tratadas explicitamente pelo código. Exceções
+  não verificadas incluem subclasses de RuntimeException e não precisam]
+  ser explicitamente tratadas ou declaradas.
+- Múltiplos Bloco Catch: Java permite o uso de múltiplos blocos catch
+  para tratar diferentes tipos de exceções em um único bloco try.
+- Finally: bloco que contem um código que deve ser executado sempre,
+  independentemente de ocorrer uma exceção ou não.
+
+Em Rust:
+- Sem Checked Exceptions: as exceções não são verificadas. Não é
+  necessário declarar ou tratar exceções explicitamente no código.
+- Result e Option Types: os tipos especiais como Result e Option são
+  utilizados para lidar com erros e resultados, em vez de depender
+  exclusivamente de exceções. O programador é encorajado a tratar
+  explicitamente os valores de erro, o que torna o tratamento de erros
+  mais previsível.
+- Padrão de Result: (uso do match) o padrão em Rust é retornar um
+  Result que encapsula tanto o valor esperado quanto qualquer informação
+  de erro. O programador deve verificar e tratar o resultado.
+- Não há Finally: como alternativa é comum usar funções como std::mem::drop
+  ou std::fs::remove_file para garantir que certas ações ocorram mesmo em
+  caso de erro.
+- Opção de Panic: a função panic! pode ser usada para sinalizar condições
+  de erro graves. No entanto, o uso de panic é desencorajado na maioria
+  dos casos, e a preferência é por tratamento explícito de erros.
