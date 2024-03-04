@@ -21,6 +21,9 @@ try {
      << ou seja, ele executa após o término do bloco try, caso não ocorra >>
      << nenhuma situação de exceção e também após o término de algum bloco >>
      << catch, caso alguma exceção tenha sido capturada >>
+     << Importante: Esse bloco (o finally) não está disponível em C++ >>
+     <<             Em C++ é possível implementar no destrutor dos objetos >>
+     <<             envolvidos o código desejado >>
 }
 
 O bloco try abriga o código suscetível a exceções, sendo monitorado em tempo de
